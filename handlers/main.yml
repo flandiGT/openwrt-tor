@@ -1,0 +1,6 @@
+---
+- name: enable tor
+  raw: /etc/init.d/tor enable
+
+- name: restart tor
+  raw: /etc/init.d/tor restart

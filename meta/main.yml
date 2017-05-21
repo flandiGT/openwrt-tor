@@ -1,0 +1,14 @@
+---
+galaxy_info:
+  author: flandiGT
+  description: configure tor aspects of your openwrt system.
+  license: MIT
+  min_ansible_version: 1.7
+  platforms:
+   - name: Openwrt
+     versions:
+     - 15.05
+  categories:
+    - system
+dependencies:
+  - { role: openwrt-uci }

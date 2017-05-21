@@ -1,0 +1,27 @@
+User tor
+PidFile {{tor_pid_file_path}}
+AvoidDiskWrites 1
+DataDirectory {{tor_data_directory_path}}
+
+VirtualAddrNetwork 10.192.0.0/10
+AutomapHostsOnResolve 1
+
+TransPort {{proxy_port}}
+TransListenAddress 127.0.0.1
+TransListenAddress {{server_address}}
+
+DNSPort {{dns_port}}
+DNSListenAddress 127.0.0.1
+DNSListenAddress {{server_address}}
+
+SocksPort {{socks_port}}
+SocksBindAddress 127.0.0.1
+SocksBindAddress {{server_address}}
+SocksPolicy accept {{network_address}}
+#SocksPolicy reject *
+
+Log notice file {{tor_log_directory_path}}/notice.log
+#Log debug-info file {{tor_log_directory_path}}/debug.log
+#Log warn-err file {{tor_log_directory_path}}/error.log
+#Log warn file {{tor_log_directory_path}}/warn.log
+Log err file {{tor_log_directory_path}}/error.log

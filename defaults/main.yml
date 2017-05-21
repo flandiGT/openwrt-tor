@@ -1,0 +1,10 @@
+---
+dns_port: 9053
+proxy_port: 9040
+socks_port: 9050
+server_address: 192.168.2.1
+network_address: 192.168.2.0/24
+torrc_path: /etc/tor/torrc
+tor_data_directory_path: /var/lib/tor
+tor_log_directory_path: /var/log/tor
+tor_pid_file_path: /var/run/tor.pid

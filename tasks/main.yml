@@ -1,0 +1,13 @@
+---
+- name: install tor package
+  opkg: name=tor state=present update_cache=yes
+  register: tor_install
+  notify:
+  - enable tor
+
+- name: setup torrc settings
+  template:
+    src: torrc.j2
+    dest: "{{torrc_path}}"
+  notify:
+  - restart tor
